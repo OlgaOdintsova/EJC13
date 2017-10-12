@@ -1,4 +1,4 @@
-package com.epam.homework;
+package com.epam.homework.first;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class Student {
             for (int i = 1; i < value ; i++) {
                 System.out.println("A student has passed " + i + " exams.");
             }
-        }else {
+        } else {
             System.out.println("I like this number!");
         }
     }
