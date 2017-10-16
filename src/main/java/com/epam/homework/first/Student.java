@@ -10,8 +10,7 @@ public class Student {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("Enter the number: ");
-        String param = reader.readLine();
-        int value = Integer.parseInt(param);
+        int value = Integer.parseInt(reader.readLine());
 
         if (value > 0 && value < 20) {
             for (int i = 1; i < value ; i++) {
