@@ -30,14 +30,17 @@ public class TrafficLight {
      * 5-9 => Green<br>
      * @param numberMinutes The minute specified in the range from 0 to 9.
      * @return The color of the traffic light at the moment.
+     * @throws IllegalArgumentException If the given minute not in the range.
      */
-    private static String getColourByMinutes(int numberMinutes) {
+    static String getColourByMinutes(int numberMinutes) throws IllegalArgumentException {
         if (numberMinutes >= 0 && numberMinutes < 2) {
             return "Red.";
         } else if (numberMinutes >= 2 && numberMinutes < 5) {
             return "Yellow.";
-        } else {
+        } else if (numberMinutes >= 5 && numberMinutes < 10) {
             return "Green!";
+        } else {
+            throw new IllegalArgumentException("The minute should be in the range from 0 to 9.");
         }
     }
 
