@@ -3,17 +3,17 @@ package com.epam.homework.second;
 import java.util.Scanner;
 
 /**
- * Предназначен для решения следующей задачи:
- * Светофор горящий красным - 2 минуты, желтым - 3 минуты, зелёным - 5 минут.
- * В часе 60 минут, на 60 начинаем с начала.
- * С консоли вводятся минуты, возвращается цвет светофора.
+ * It is designed to solve the following problem:
+ * The traffic light lights red - 2 minutes, yellow - 3 minutes, green - 5 minutes.
+ * Colors are successively replacing each other.
+ * When you enter from the console minutes, the color of the traffic light returns.
  * @author Olga Odintsova
  */
 public class TrafficLight {
 
     /**
-     * Точка входа в приложение
-     * @param args Аргументы командной строки, передаваемые при старте приложения.
+     * App entry point
+     * @param args Command-line arguments passed when the application starts.
      */
     public static void main(String[] args) {
         System.out.print("Enter the number of minutes: ");
@@ -24,12 +24,12 @@ public class TrafficLight {
     }
 
     /**
-     * Сопоставляет указанной минуте цвет:<br>
+     * Correlation of the specified minute and color:<br>
      * 0-1 => Red<br>
      * 2-4 => Yellow<br>
      * 5-9 => Green<br>
-     * @param numberMinutes Минута, заданная в диапазоне от 0 до 9.
-     * @return Цвет светофора в данную минуту.
+     * @param numberMinutes The minute specified in the range from 0 to 9.
+     * @return The color of the traffic light at the moment.
      */
     private static String getColourByMinutes(int numberMinutes) {
         if (numberMinutes >= 0 && numberMinutes < 2) {
@@ -42,10 +42,10 @@ public class TrafficLight {
     }
 
     /**
-     * Осуществляет проверку валидности введённых с клавиатуры данных.
-     * @param line Введённая пользователем строка.
-     * @return Значение, успешно прошедшее проверку.
-     * @throws IllegalArgumentException В случае, если введенная строка не прошла проверку.
+     * Verifies the validity of the data entered from the keyboard.
+     * @param line The string entered by the user.
+     * @return A value that passed successfully.
+     * @throws IllegalArgumentException In case the entered string didn't pass the test.
      */
     private static int validate(String line) throws IllegalArgumentException {
         try {
