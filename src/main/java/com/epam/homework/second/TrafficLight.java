@@ -50,7 +50,7 @@ public class TrafficLight {
      * @return A value that passed successfully.
      * @throws IllegalArgumentException In case the entered string didn't pass the test.
      */
-    private static int validate(String line) throws IllegalArgumentException {
+    static int validate(String line) throws IllegalArgumentException {
         try {
             int value = Integer.parseInt(line);
 

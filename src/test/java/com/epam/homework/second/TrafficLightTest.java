@@ -6,6 +6,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TrafficLightTest {
 
+    @Test
+    void validateTest() {
+        assertThrows(IllegalArgumentException.class, () -> TrafficLight.validate("word"));
+        assertThrows(IllegalArgumentException.class, () -> TrafficLight.validate("-1"));
+        assertEquals(999, TrafficLight.validate("999"));
+    }
+
     @SuppressWarnings("ResultOfMethodCallIgnored")
     @Test
     void getRedColourByMinutes() {
