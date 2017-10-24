@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TrafficLightTest {
 
     @Test
-    void validateTest() {
+    void testValidate() {
         assertThrows(IllegalArgumentException.class, () -> TrafficLight.validate("word"));
         assertThrows(IllegalArgumentException.class, () -> TrafficLight.validate("-1"));
         assertEquals(999, TrafficLight.validate("999"));
@@ -15,7 +15,7 @@ class TrafficLightTest {
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     @Test
-    void getRedColourByMinutes() {
+    void testGetRedColourByMinutes() {
         assertThrows(IllegalArgumentException.class, () -> TrafficLight.getColourByMinutes(-1));
         assertEquals("Red.", TrafficLight.getColourByMinutes(0));
         assertEquals("Red.", TrafficLight.getColourByMinutes(1));
@@ -23,7 +23,7 @@ class TrafficLightTest {
     }
 
     @Test
-    void getYellowColourByMinutes() {
+    void testGetYellowColourByMinutes() {
         assertNotEquals("Yellow.", TrafficLight.getColourByMinutes(1));
         assertEquals("Yellow.", TrafficLight.getColourByMinutes(2));
         assertEquals("Yellow.", TrafficLight.getColourByMinutes(4));
@@ -32,7 +32,7 @@ class TrafficLightTest {
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     @Test
-    void getGreenColourByMinutes() {
+    void testGetGreenColourByMinutes() {
         assertNotEquals("Green!", TrafficLight.getColourByMinutes(4));
         assertEquals("Green!", TrafficLight.getColourByMinutes(5));
         assertEquals("Green!", TrafficLight.getColourByMinutes(9));
