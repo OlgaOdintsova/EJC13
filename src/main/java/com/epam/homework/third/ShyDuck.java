@@ -1,13 +1,16 @@
 package com.epam.homework.third;
 
-public class ShyDuck implements Duck{
-    @Override
-    public String quack() {
-        return null;
+import com.epam.homework.third.possibility.FlyWithWings;
+import com.epam.homework.third.possibility.MuteQuack;
+
+public class ShyDuck extends AbstractDuck{
+    public ShyDuck() {
+        quackAbility = new MuteQuack();
+        flyAbility = new FlyWithWings();
     }
 
     @Override
-    public String fly() {
-        return "flies away";
+    public void display() {
+        System.out.println("I'm a Shy duck.");
     }
 }

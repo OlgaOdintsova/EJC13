@@ -1,13 +1,16 @@
 package com.epam.homework.third;
 
-public class NoizeDuck implements Duck {
-    @Override
-    public String quack() {
-        return "Quack quack quack";
+import com.epam.homework.third.possibility.FlyNoWay;
+import com.epam.homework.third.possibility.Quack;
+
+public class NoizeDuck extends AbstractDuck {
+    public NoizeDuck() {
+        quackAbility = new Quack();
+        flyAbility = new FlyNoWay();
     }
 
     @Override
-    public String fly() {
-        return null;
+    public void display() {
+        System.out.println("I'm a Noize duck.");
     }
 }
