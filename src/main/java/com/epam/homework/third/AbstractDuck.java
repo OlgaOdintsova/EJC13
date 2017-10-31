@@ -1,6 +1,6 @@
 package com.epam.homework.third;
 
-public abstract class AbstractDuck implements FlyAbility, QuackAbility {
+public abstract class AbstractDuck  {
     FlyAbility flyAbility;
     QuackAbility quackAbility;
 
