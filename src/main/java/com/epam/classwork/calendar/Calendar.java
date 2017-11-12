@@ -21,14 +21,16 @@ public class Calendar {
                 return "July";
             case 8:
                 return "August";
-            case 10:
+            case 9:
                 return "September";
-            case 11:
+            case 10:
                 return "October";
-            case 12:
+            case 11:
                 return "November";
-            default:
+            case 12:
                 return "December";
+            default:
+                return "It's not a number of month";
         }
     }
 }
