@@ -1,7 +1,0 @@
-package com.epam.classwork.studyEnum;
-
-public enum Kitten {
-    GAV,
-    PUSHOK,
-    ANCY
-}
