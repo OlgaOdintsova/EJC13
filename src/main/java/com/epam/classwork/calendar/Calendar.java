@@ -2,9 +2,9 @@ package com.epam.classwork.calendar;
 
 public class Calendar {
 
-    public static String chooseMounth(int enterMounth) {
+    public static String chooseMonth(int enterMonth) {
 
-        switch (enterMounth) {
+        switch (enterMonth) {
             case 1:
                 return "January";
             case 2:
