@@ -1,4 +1,4 @@
-package com.epam.homework.oop;
+package com.epam.homework.oop.task1;
 
 public class Pen {
     private int price;
