@@ -1,7 +1,6 @@
-package com.epam.homework.oop.task2;
+package com.epam.homework.oop.task234;
 
 
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -17,7 +16,8 @@ public class Main {
 
         do {
             System.out.println("You have to choose the action:\n" +
-                    "ADD - add new stationery\n" +
+                    "ADD - add a new stationery\n" +
+                    "KIT - add a Beginner's Kit \n" +
                     "SUM - get a full price of stationary \n" +
                     "EXIT - Exiting the application");
             System.out.print("Enter the command: ");
@@ -32,7 +32,7 @@ public class Main {
                         break;
 
                     case KIT:
-                        employeeStationary.addAll(List<Stationery> beginnerKit);
+                        employeeStationary.addAll(beginnerKit.getBeginnerList());
                         break;
 
                     case SUM:
@@ -48,7 +48,7 @@ public class Main {
 
             }
             System.out.println("Do you want to continue working? 1 - yes 0 - no");
-        } while (scanner.nextInt() == 1);
+        } while (Integer.valueOf(scanner.nextLine()) == 1);
 
 
     }
@@ -63,45 +63,45 @@ public class Main {
                             "6 - Sticker\n" +
                             "7 - Rubber\n");
 
-        String line = scanner.nextLine();
+        String kind = scanner.nextLine();
 
-        if ("1".equals(line)) {
+        if ("1".equals(kind)) {
             System.out.println("Enter price and color with space: ");
-            int price = scanner.nextInt();
-            String colour = scanner.nextLine();
+            int price = Integer.valueOf(scanner.nextLine());
+            String colour = String.valueOf(scanner.nextLine());
             employeeStationary.add(new Pen(price, colour));
         }
-        if ("2".equals(line)) {
+        if ("2".equals(kind)) {
             System.out.println("Enter price and color with space: ");
-            int price = scanner.nextInt();
-            String colour = scanner.nextLine();
+            int price = Integer.valueOf(scanner.nextLine());
+            String colour = String.valueOf(scanner.nextLine());
             employeeStationary.add(new FountainPen(price, colour));
         }
-        if ("3".equals(line)) {
+        if ("3".equals(kind)) {
             System.out.println("Enter price and color with space: ");
-            int price = scanner.nextInt();
-            String colour = scanner.nextLine();
+            int price = Integer.valueOf(scanner.nextLine());
+            String colour = String.valueOf(scanner.nextLine());
             employeeStationary.add(new Pencil(price, colour));
         }
-        if ("4".equals(line)) {
+        if ("4".equals(kind)) {
             System.out.println("Enter price and color with space: ");
-            int price = scanner.nextInt();
-            String colour = scanner.nextLine();
+            int price = Integer.valueOf(scanner.nextLine());
+            String colour = String.valueOf(scanner.nextLine());
             employeeStationary.add(new Marker(price, colour));
         }
-        if ("5".equals(line)) {
+        if ("5".equals(kind)) {
             System.out.println("Enter price: ");
-            int price = scanner.nextInt();
+            int price = Integer.valueOf(scanner.nextLine());
             employeeStationary.add(new Notebook(price));
         }
-        if ("6".equals(line)) {
+        if ("6".equals(kind)) {
             System.out.println("Enter price: ");
-            int price = scanner.nextInt();
+            int price = Integer.valueOf(scanner.nextLine());
             employeeStationary.add(new Sticker(price));
         }
-        if ("7".equals(line)) {
+        if ("7".equals(kind)) {
             System.out.println("Enter price: ");
-            int price = scanner.nextInt();
+            int price = Integer.valueOf(scanner.nextLine());
             employeeStationary.add(new Rubber(price));
         }
     }

@@ -1,4 +1,4 @@
-package com.epam.homework.oop.task2;
+package com.epam.homework.oop.task234;
 
 public enum Action {
     ADD,
