@@ -1,4 +1,4 @@
-package com.epam.homework.oop.task234;
+package com.epam.homework.oop.task234.stationery;
 
 public class Marker extends ThingForWriting {
 

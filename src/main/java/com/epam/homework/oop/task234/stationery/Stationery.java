@@ -1,4 +1,8 @@
-package com.epam.homework.oop.task234;
+package com.epam.homework.oop.task234.stationery;
+
+import com.epam.homework.oop.task234.ability.CountAbility;
+
+import java.util.Objects;
 
 public abstract class Stationery implements CountAbility {
     private int price;
@@ -16,4 +20,8 @@ public abstract class Stationery implements CountAbility {
         return price;
     }
 
+    @Override
+    public String toString() {
+        return '{' + getClass().getSimpleName() + " price = " + price + '}';
+    }
 }

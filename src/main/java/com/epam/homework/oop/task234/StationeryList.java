@@ -1,9 +1,13 @@
 package com.epam.homework.oop.task234;
 
+import com.epam.homework.oop.task234.ability.CountAbility;
+import com.epam.homework.oop.task234.stationery.Stationery;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
-public class StationeryList implements CountAbility{
+public class StationeryList implements CountAbility {
 
     private List<Stationery> list = new ArrayList<>();
 
@@ -26,4 +30,8 @@ public class StationeryList implements CountAbility{
         list.addAll(stationeryList);
     }
 
+    @Override
+    public String toString() {
+        return list.toString();
+    }
 }

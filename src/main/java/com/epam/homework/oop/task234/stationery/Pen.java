@@ -1,4 +1,6 @@
-package com.epam.homework.oop.task234;
+package com.epam.homework.oop.task234.stationery;
+
+import com.epam.homework.oop.task234.ability.WriteAbility;
 
 public class Pen extends ThingForWriting implements WriteAbility {
 

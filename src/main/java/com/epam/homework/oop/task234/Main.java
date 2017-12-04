@@ -1,6 +1,8 @@
 package com.epam.homework.oop.task234;
 
 
+import com.epam.homework.oop.task234.stationery.*;
+
 import java.util.Scanner;
 
 
@@ -12,12 +14,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         StationeryList employeeStationary = new StationeryList();
         BeginnerKit beginnerKit = new BeginnerKit();
-        System.out.println("This application is for accounting of all employee's office supplies.\n");
+        System.out.println("This application is for accounting of all employee's office supplies.");
 
         do {
-            System.out.println("You have to choose the action:\n" +
+            System.out.println("\nYou have to choose the action:\n" +
                     "ADD - add a new stationery\n" +
                     "KIT - add a Beginner's Kit \n" +
+                    "SHOW - show the list of employee's office supplies \n" +
                     "SUM - get a full price of stationary \n" +
                     "EXIT - Exiting the application");
             System.out.print("Enter the command: ");
@@ -28,11 +31,17 @@ public class Main {
                 switch (Action.valueOf(line.toUpperCase())) {
                     case ADD:
                         main.getAdd(employeeStationary, scanner);
-                        System.out.println("You added a stationary.");
+                        System.out.println("You added a new stationary.");
                         break;
 
                     case KIT:
                         employeeStationary.addAll(beginnerKit.getBeginnerList());
+                        System.out.println("You added a new Beginer's Kit.");
+                        break;
+
+                    case SHOW:
+                        System.out.println("All employee's stationeries: \n");
+                        System.out.println(employeeStationary);
                         break;
 
                     case SUM:
@@ -45,12 +54,13 @@ public class Main {
                 }
             } catch (IllegalArgumentException e) {
                 System.out.println("You entered an invalid command. Try again.");
+                System.out.println("Do you want to continue working? 1 - yes 0 - no");
 
+                if (Integer.valueOf(scanner.nextLine()) == 0) {
+                    return;
+                }
             }
-            System.out.println("Do you want to continue working? 1 - yes 0 - no");
-        } while (Integer.valueOf(scanner.nextLine()) == 1);
-
-
+        } while (true);
     }
 
     void getAdd(StationeryList employeeStationary, Scanner scanner) {
@@ -66,44 +76,31 @@ public class Main {
         String kind = scanner.nextLine();
 
         if ("1".equals(kind)) {
-            System.out.println("Enter price and color with space: ");
-            int price = Integer.valueOf(scanner.nextLine());
-            String colour = String.valueOf(scanner.nextLine());
-            employeeStationary.add(new Pen(price, colour));
-        }
-        if ("2".equals(kind)) {
-            System.out.println("Enter price and color with space: ");
-            int price = Integer.valueOf(scanner.nextLine());
-            String colour = String.valueOf(scanner.nextLine());
-            employeeStationary.add(new FountainPen(price, colour));
-        }
-        if ("3".equals(kind)) {
-            System.out.println("Enter price and color with space: ");
-            int price = Integer.valueOf(scanner.nextLine());
-            String colour = String.valueOf(scanner.nextLine());
-            employeeStationary.add(new Pencil(price, colour));
-        }
-        if ("4".equals(kind)) {
-            System.out.println("Enter price and color with space: ");
-            int price = Integer.valueOf(scanner.nextLine());
-            String colour = String.valueOf(scanner.nextLine());
-            employeeStationary.add(new Marker(price, colour));
-        }
-        if ("5".equals(kind)) {
-            System.out.println("Enter price: ");
-            int price = Integer.valueOf(scanner.nextLine());
-            employeeStationary.add(new Notebook(price));
-        }
-        if ("6".equals(kind)) {
-            System.out.println("Enter price: ");
-            int price = Integer.valueOf(scanner.nextLine());
-            employeeStationary.add(new Sticker(price));
-        }
-        if ("7".equals(kind)) {
-            System.out.println("Enter price: ");
-            int price = Integer.valueOf(scanner.nextLine());
-            employeeStationary.add(new Rubber(price));
+            employeeStationary.add(new Pen(getPrice(scanner), getColour(scanner)));
+        }else if ("2".equals(kind)) {
+            employeeStationary.add(new FountainPen(getPrice(scanner), getColour(scanner)));
+        }else if ("3".equals(kind)) {
+            employeeStationary.add(new Pencil(getPrice(scanner), getColour(scanner)));
+        }else if ("4".equals(kind)) {
+            employeeStationary.add(new Marker(getPrice(scanner), getColour(scanner)));
+        }else if ("5".equals(kind)) {
+            employeeStationary.add(new Notebook(getPrice(scanner)));
+        }else if ("6".equals(kind)) {
+            employeeStationary.add(new Sticker(getPrice(scanner)));
+        }else if ("7".equals(kind)) {
+            employeeStationary.add(new Rubber(getPrice(scanner)));
         }
     }
+
+    private int getPrice(Scanner scanner) {
+        System.out.println("Enter price: ");
+        return Integer.valueOf(scanner.nextLine());
+    }
+
+    private String getColour (Scanner scanner) {
+        System.out.println("Enter colour: ");
+        return String.valueOf(scanner.nextLine());
+    }
+
 
 }
