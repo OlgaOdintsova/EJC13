@@ -1,6 +1,7 @@
 package com.epam.homework.oop.task2;
 
 
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -11,6 +12,7 @@ public class Main {
         Main main = new Main();
         Scanner scanner = new Scanner(System.in);
         StationeryList employeeStationary = new StationeryList();
+        BeginnerKit beginnerKit = new BeginnerKit();
         System.out.println("This application is for accounting of all employee's office supplies.\n");
 
         do {
@@ -30,7 +32,7 @@ public class Main {
                         break;
 
                     case KIT:
-                        employeeStationary.addAll(beginnerKit);
+                        employeeStationary.addAll(List<Stationery> beginnerKit);
                         break;
 
                     case SUM:

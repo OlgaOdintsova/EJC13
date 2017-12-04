@@ -22,7 +22,7 @@ public class StationeryList implements CountAbility{
         return sumOfStationery;
     }
 
-    public void addAll(StationeryList stationeryList) {
+    public void addAll(List<Stationery> stationeryList) {
         list.addAll(stationeryList);
     }
 
