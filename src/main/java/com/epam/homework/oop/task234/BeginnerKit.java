@@ -1,4 +1,4 @@
-package com.epam.homework.oop.task2;
+package com.epam.homework.oop.task234;
 
 import java.util.Arrays;
 import java.util.List;

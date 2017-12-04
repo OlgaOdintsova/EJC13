@@ -1,4 +1,4 @@
-package com.epam.homework.oop.task2;
+package com.epam.homework.oop.task234;
 
 public abstract class Stationery implements CountAbility {
     private int price;
