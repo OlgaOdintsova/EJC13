@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BeginnerKit extends StationeryList {
-    private List<Stationery> beginnerKit = Arrays.asList(
+    private List<Stationery> beginnerList = Arrays.asList(
             new Pen(10, "blue"),
             new Notebook(15),
             new Rubber(20));
@@ -12,4 +12,9 @@ public class BeginnerKit extends StationeryList {
     public void add(Stationery stationery) {
         throw new UnsupportedOperationException();
     }
+
+    public List<Stationery> getBeginnerList() {
+        return beginnerList;
+    }
+
 }
