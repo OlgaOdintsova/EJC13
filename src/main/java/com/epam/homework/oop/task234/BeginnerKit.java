@@ -1,6 +1,9 @@
 package com.epam.homework.oop.task234;
 
 import com.epam.homework.oop.task234.stationery.*;
+import com.epam.homework.oop.task234.stationery.paper.Notebook;
+import com.epam.homework.oop.task234.stationery.writing.Marker;
+import com.epam.homework.oop.task234.stationery.writing.Pen;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,7 +18,7 @@ public class BeginnerKit extends StationeryList {
         throw new UnsupportedOperationException();
     }
 
-    public List<Stationery> getBeginnerList() {
+    List<Stationery> getBeginnerList() {
         return beginnerList;
     }
 

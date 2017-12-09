@@ -1,10 +1,11 @@
-package com.epam.homework.oop.task234.stationery;
+package com.epam.homework.oop.task234.stationery.paper;
 
 import com.epam.homework.oop.task234.ability.PaperAbility;
+import com.epam.homework.oop.task234.stationery.Stationery;
 
 public abstract class PieceOfPaper extends Stationery implements PaperAbility {
 
-    public PieceOfPaper(int price) {
+    PieceOfPaper(int price) {
         super(price);
     }
 

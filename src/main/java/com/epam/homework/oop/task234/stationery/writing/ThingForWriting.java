@@ -1,12 +1,13 @@
-package com.epam.homework.oop.task234.stationery;
+package com.epam.homework.oop.task234.stationery.writing;
 
 import com.epam.homework.oop.task234.ability.WriteAbility;
+import com.epam.homework.oop.task234.stationery.Stationery;
 
 public abstract class ThingForWriting extends Stationery implements WriteAbility {
 
     private String colour;
 
-    public ThingForWriting(int price, String colour) {
+    ThingForWriting(int price, String colour) {
         super(price);
         this.colour = colour;
     }

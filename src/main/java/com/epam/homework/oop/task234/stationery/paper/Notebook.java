@@ -1,4 +1,4 @@
-package com.epam.homework.oop.task234.stationery;
+package com.epam.homework.oop.task234.stationery.paper;
 
 public class Notebook extends PieceOfPaper {
 

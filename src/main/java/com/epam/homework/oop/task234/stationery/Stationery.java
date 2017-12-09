@@ -2,9 +2,8 @@ package com.epam.homework.oop.task234.stationery;
 
 import com.epam.homework.oop.task234.ability.CountAbility;
 
-import java.util.Objects;
 
-public abstract class Stationery implements CountAbility {
+public abstract class Stationery implements CountAbility, Comparable<Stationery> {
     private int price;
 
     public Stationery(int price) {
@@ -22,6 +21,15 @@ public abstract class Stationery implements CountAbility {
 
     @Override
     public String toString() {
-        return '{' + getClass().getSimpleName() + " price = " + price + '}';
+        return '{' + getShortName() + " price = " + price + '}';
+    }
+
+    @Override
+    public int compareTo(Stationery other) {
+        return Integer.compare(this.price, other.price);
+    }
+
+    public String getShortName() {
+       return getClass().getSimpleName();
     }
 }

@@ -5,5 +5,6 @@ public enum Action {
     KIT,
     SHOW,
     SUM,
+    SORT,
     EXIT
 }
